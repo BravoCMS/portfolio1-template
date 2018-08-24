@@ -80,38 +80,7 @@
     <{get_contacts "layout_contacts"}>
 
     <div class="container">
-        <div class="alert alert-dark" role="alert">
-            <{t "Template:" escape}>
-            <strong>
-                <{block name="template-name"}>
-                    /layout.tpl
-                <{/block}>
-
-                <{if $__tf}>
-                    <a href="?__tf=">
-                        <b><{$__tf}></b>
-                        - Вернуться к стандартному шаблону
-                    </a>
-                <{/if}>
-            </strong>
-
-            <{if $smarty.get.template_debug === '1'}>
-                <a href="?" class="btn btn-sm btn-info float-right">
-                    <{t "close_debug" escape}>
-                </a>
-
-                <{debug}>
-            <{else}>
-                <a href="?template_debug=1" class="btn btn-sm btn-info float-right">
-                    <{t "open_debug" escape}>
-                </a>
-            <{/if}>
-        </div>
-
-        <{custom_code "site_header"}>
-        
-        
-
+     <{custom_code "site_header"}>
         <div class="header container">
             <a class="logo" href="<{$site.home_url}>">
                 <{if $site.logo.type === 'image'}>
